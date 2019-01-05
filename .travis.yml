@@ -15,7 +15,7 @@ script:
   - echo localhost > inventory
   - ansible-playbook -i inventory test.yml --syntax-check
   - >
-    ansible-playbook -i inventory test.yml --connection=local --sudo
+    time ansible-playbook -i inventory test.yml --connection=local --sudo
     -e "nvm_env=$NVM_ENV"
     -e "nvm_root=/tmp/.nvm"
     -e "nvm_users=['travis']"

@@ -4,3 +4,5 @@
   with_nested:
     - "{{ nvm_node_versions }}"
     - "{{ nvm_global_packages }}"
+  async: 1000
+  poll: 10
